@@ -9,3 +9,7 @@ The supplemental material to Chapter 1 contains:
 
 A `pdf` file of Chapter 1 is [here](http://fredhasselman.com).
 
+The Open Science Framework project page for this chapter's supplemental materials is [here](http://osf.io/8y4sq) and may be cited as:
+
+Hasselman, F., (2014). Beyond The Boundary - 1st Chapter: Supplemental Materials. Retrieved from Open Science Framework, osf.io/8y4sq
+
