@@ -7,7 +7,8 @@ The supplemental material to Chapter 1 contains:
 2. **The Crud Factor:** R Code which will run the 'crud factor' simulations and create Figure 1.5
 3. **The Corroboration Formula:** Latex code that will create Box 1.1
 
-A `pdf` file of Chapter 1 is [here](http://fredhasselman.com).
+A `pdf` file of Chapter 1 is [here](http://figshare.com/authors/Fred%20Hasselman/520930) and may be cited as:
+
 
 The Open Science Framework project page for this chapter's supplemental materials is [here](http://osf.io/8y4sq) and may be cited as:
 
