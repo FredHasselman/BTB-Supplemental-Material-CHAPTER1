@@ -8,22 +8,11 @@
 # BTBfiles SETUP --------------------------------------------------------------
 #
 # First the script will download the latest Beyond The Boundary Toolbox, 'BTBTB.R'
-# It is stored in a GitHub repository from which we will source it using the 
-# extremely useful function source_https() I found on Tony Breyal's blog:
-# http://tonybreyal.wordpress.com/2011/11/24/source_https-sourcing-an-r-script-from-github/
-
-source_https <- function(url, ...) {
-  # load the package 
-  require(RCurl)
-
-  # parse and evaluate each .R script
-  sapply(c(url, ...), function(u) {
-    eval(parse(text = getURL(u, followlocation = TRUE, cainfo = system.file("CurlSSL", "cacert.pem", package = "RCurl"))), envir = .GlobalEnv)
-  })
-}
+# It is stored in a GitHub repository from which we will source it using the devtools package
+require(devtools)
 
 # Source the BTBTB.R toolbox!
-source_https("https://raw2.github.com/FredHasselman/toolboxR/master/BTBTB.R")
+source_url("https://raw2.github.com/FredHasselman/toolboxR/master/BTBTB.R")
 
 # Set the working directory to "BTBfiles" by calling the `pathfinder` fuction [function defined in BTBTB.R]
 # If you know the extracted folder is beyond the scope of the current `getwd()` path, be sure to manually assign 
