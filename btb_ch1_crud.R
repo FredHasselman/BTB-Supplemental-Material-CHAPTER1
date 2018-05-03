@@ -9,29 +9,34 @@
 #
 # First the script will download the latest Beyond The Boundary Toolbox, 'BTBTB.R'
 # It is stored in a GitHub repository from which we will source it using the devtools package
-require(devtools)
+#require(devtools)
 
 # Source the BTBTB.R toolbox!
-source_url("https://raw2.github.com/FredHasselman/toolboxR/master/BTBTB.R")
+#source_url("https://raw2.github.com/FredHasselman/toolboxR/master/BTBTB.R")
 
 # Set the working directory to "BTBfiles" by calling the `pathfinder` fuction [function defined in BTBTB.R]
 # If you know the extracted folder is beyond the scope of the current `getwd()` path, be sure to manually assign 
 # YOURPATH <- "/your/path/to/BTBfiles"
-YOURPATH <- pathfinder(folder="^(BTBfiles)$")
-setwd(YOURPATH)
+#YOURPATH <- pathfinder(folder="^(BTBfiles)$")
+#setwd(YOURPATH)
 
 # Load required libraries for Chapter 1
 # This installs a package if it is not present on your system [function defined in BTBTB.R]
-init(c("plyr","MASS","ggplot2","grid"))
+#init(c("plyr","MASS","ggplot2","grid"))
 
 # Most Scientific Journals want Arial as a font for Figures [function defined in BTBTB.R]
-setArial(afmPATH=paste(YOURPATH,"afm",sep="/"))
+#setArial(afmPATH=paste(YOURPATH,"afm",sep="/"))
 
 
 # ----------------------CHAPTER THE FIRST---------------------------------------
 #
 # This code will reproduce the analyses/tables/figures presented in Chapter 1 of BEYOND THE BOUNDARY based on simulated data.
 # 
+
+library(plyr)
+library(MASS)
+library(ggplot2)
+library(grid)
 
 # Generate CRUD population and samples ------------------------------------
 
@@ -115,8 +120,7 @@ ggplot(df) +
   scale_colour_grey() +
   facet_wrap(ind ~ cor) +  
   xlab("Sample size of independent groups in t-test") + ylab("Number of significant tests") +
-  theme_bw(base_size=12, 
-           base_family="Arial") + 
+  theme_bw(base_size=12) + 
   theme(aspect.ratio=1, 
         axis.line = element_line(colour="black"),
         axis.title.x = element_text(vjust=-1.1),
